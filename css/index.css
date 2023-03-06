@@ -121,6 +121,7 @@ img {
     .tittle img{
         width: 16rem;
         padding: auto auto;
+        min-width: 10rem;
     }
     .menu {
         display: none;
@@ -185,10 +186,29 @@ img {
         display: grid;
         grid-auto-flow: dense;
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .info img {
+        display: block;
     }
 
     .info :nth-child(1) {
         grid-column: 2 / 3;
+    }
+
+    .text-box {
+        text-align: left;
+        width: 45.5rem;
+    }
+
+    .grid-box {
+        padding: 0;
+        margin: 0;
+    }
+
+    .align-content {
+        width: 37.9rem;
     }
 }
 
