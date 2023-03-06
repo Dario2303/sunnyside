@@ -11,6 +11,7 @@
     --blue-grayish: hsl(232, 10%, 55%);
     --blue-text-photo: hsl(198, 62%, 26%);
     --White: hsl(0, 0%, 100%);
+    --background-footer: hsl(168, 44%, 70%);
 
     --space: 5rem;
     --letter-spacing: 0.8
@@ -89,7 +90,12 @@ img {
     background-position: bottom;
 }
 
-@media (min-width: 376px) { 
+@media (min-width: 376px) {
+    
+    .header {
+        height: 80rem;
+    }
+
     .notavif .header {
         background: url(/images/desktop/image-header.jpg);
         background-size: cover;
@@ -165,6 +171,12 @@ img {
     margin: var(--space) auto calc(var(--space) * 3);
 }
 
+@media (min-width: 376px) { 
+    .header-content img {
+        margin: 8rem auto 0;
+    }
+}
+
 .header-content h1 {
     font-size: 4rem;
     color: var(--White);
@@ -172,6 +184,13 @@ img {
     letter-spacing: 0.8rem;
     margin-top: var(--space);
     line-height: 1.3;
+}
+
+@media (min-width: 376px) { 
+    .header-content h1 {
+        font-size: 6rem;
+        margin-top: 9rem;
+    }
 }
 
 /*main*/
@@ -191,6 +210,7 @@ img {
 
     .info img {
         display: block;
+        width: 100%;
     }
 
     .info :nth-child(1) {
@@ -226,9 +246,50 @@ img {
     color: var(--blue-dark);
 }
 
-.text-align h5 {
+.learn-more {
+    display: flex;
+    flex-direction: column;
+    width: 13rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media (min-width: 376px) { 
+    .learn-more {
+        margin: 0;
+    }
+}
+
+.learn-more a {
     text-transform: uppercase;
-    letter-spacing: 2;
+    text-align: center;
+}
+
+.line {
+    height: 1.2rem;
+    border-radius: 2rem;
+    padding: 0 0.4rem;
+    margin-bottom: -2.4rem;
+}
+
+.yellow-line {
+    background-color: hsl(51, 100%, 49%, 0.5);
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.learn-more:hover .yellow-line{
+    background-color: hsl(51, 100%, 49%);
+}
+
+.red-line {
+    background-color: hsl(7, 99%, 70%, 0.5);
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.learn-more:hover .red-line{
+    background-color: hsl(7, 99%, 70%);
 }
 
 /*graphic and photography*/
@@ -290,5 +351,136 @@ img {
 .photography p {
     color: var(--blue-text-photo);
 }
+
+/*Testimonials*/
+
+.testimonials-section {
+    margin: var(--space) 0;
+}
+
+@media (min-width: 376px) { 
+    .testimonials-section {
+        margin: calc(var(--space) * 2.5) 8.5rem;
+    }
+}
+
+
+.testimonials-section > h5 {
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    color: var(--blue-grayish);
+}
+
+.testimonials {
+    display: grid;
+}
+
+@media (min-width: 376px) { 
+    .testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    .testimonial h5 {
+        margin-top: var(--space);
+    }
+}
+
+.testimonial :nth-child(2) {
+    color: var(--blue-grayish-dark);
+    font-size:medium;
+}
+
+.testimonial h5 {
+    color: var(--blue-dark);
+}
+
+.testimonial :nth-child(4) {
+    color: var(--blue-grayish);
+    margin: 1rem 0;
+    font-size: small;
+}
+
+.testimonial {
+    padding-top: var(--space);
+}
+.testimonial img {
+    border-radius: 100%;
+    width: 6rem;
+}
+
+/*footer*/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+@media (min-width: 376px) { 
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.gallery img {
+    display: block;
+}
+
+.link-footer {
+    background-color: var(--background-footer);
+}
+
+.link-section {
+    margin: 0 auto;
+    height: 35rem;
+    max-width: 29.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.menu-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-section svg {
+    color: var(--cyan-text-photo);
+    width: 18rem;
+    height: 5rem;
+}
+ 
+.menu-footer{
+    padding: 3rem 0 8rem 0;
+}
+
+.menu-footer a{
+    font-family: var(--primary-font);
+    color: var(--cyan-footer);
+}
+
+.social a {
+    color: var(--cyan-text-photo);
+    font-size: 2.4rem;
+}
+
+.social i, .menu-footer a {
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: 200ms;
+}
+
+.social i:hover, .menu-footer a:hover{
+    color: var(--White);
+}
+
 
 
